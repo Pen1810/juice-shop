@@ -5,8 +5,8 @@ pool:
   vmImage: ubuntu-latest
 variables:
 - group: Semgrep app token group
-- name: my-bare-variable
-  value: 'value of my-bare-variable'
+- name: SEMGREP_APP_TOKEN
+  value: '4bd798cfe5fdcb2d3aaecbd6df0695b0bb5c0284328751aa9d0413c72215334a'
 steps:
 - script: |
     python -m pip install --upgrade pip
