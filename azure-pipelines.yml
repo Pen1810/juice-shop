@@ -5,7 +5,8 @@ pool:
   vmImage: ubuntu-latest
 variables:
 - group: Semgrep app token group
-
+- name: my-bare-variable
+  value: 'value of my-bare-variable'
 steps:
 - script: |
     python -m pip install --upgrade pip
@@ -13,3 +14,4 @@ steps:
     semgrep ci
   env:
     SEMGREP_PR_ID: $(System.PullRequest.PullRequestNumber)
+    
